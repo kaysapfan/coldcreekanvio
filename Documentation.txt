@@ -1,0 +1,25 @@
+cold creek documentation file
+
+install/setup anvio environment:
+https://anvio.org/install/ #this is the website/instructions I used to install anvio in my terminal
+I created a Miniconda (Python 3) DevContainer using a Docker file
+
+# you have to run a conda install for the anvio software to work- there is a copy paste format in the url above
+
+
+
+
+install/setup anvio:
+https://anvio.org/install/ #this is the website/instructions I used to install anvio in my terminal
+I created a Miniconda (Python 3) DevContainer using a Docker file
+$ conda activate anvio-7.1
+
+$ curl -L https://github.com/merenlab/anvio/releases/download/v7.1/anvio-7.1.tar.gz \
+        --output anvio-7.1.tar.gz
+
+$ pip install anvio-7.1.tar.gz
+
+# check to make sure the install went correctly
+
+$ anvi-self-test --suite mini
+
