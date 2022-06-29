@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # save this file somewhere on your disk. open your terminal, and go there. then type these commands:
 #
