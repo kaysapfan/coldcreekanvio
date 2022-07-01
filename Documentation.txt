@@ -2,7 +2,6 @@ cold creek documentation file
 
 install/setup anvio environment:
 https://anvio.org/install/ #this is the website/instructions I used to install anvio in my terminal
-I created a Miniconda (Python 3) DevContainer using a Docker file
 
 # you have to run a conda install for the anvio software to work- there is a copy paste format in the url above
 
