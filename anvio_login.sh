@@ -8,3 +8,5 @@ conda activate anvio-7.1
 
 # from here you can run whatever script you want- probably start with a file
 
+# yay this bash script works!! (this file is mostly a test run for me and bash scripts)
+
