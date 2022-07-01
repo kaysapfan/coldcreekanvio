@@ -1,7 +1,6 @@
 #!/bin/bash
 
-qrsh -l h_rt=03:00:00,h_data=10G    # this will login to a shell on the hoffman2 server
-# please note that the amount of data may have to be increased, this is just a basic setting
+cd coldcreekanvio   # move to the correct directory
 
 module load anaconda3   # this will allow conda to open anvio
 
