@@ -22,3 +22,18 @@ $ pip install anvio-7.1.tar.gz
 
 $ anvi-self-test --suite mini
 
+# Kaysa's documentation file
+##########################################################
+#
+#  July 11, 2022
+#  Run 
+###########################################################
+# path where data lives:
+
+# get a list of all time pts:
+ls /srv/gsfs0/projects/snyder/hayanlee/projects/meta-gut/contigs/IDBA_UD/  | grep -v run > ~/snyder_project/timepts.txt
+# run a test on HMP data
+qsub /home/ngarud/snyder_project/qsub_scripts/MIDAS_test
+# now, run MIDAS on the real data set.
+qsub /home/ngarud/snyder_project/qsub_scripts/MIDAS_species_snps_cnvs
+###############################
