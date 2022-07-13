@@ -2,7 +2,6 @@
 
 
 #$ -N quality_filter
-#$ -wd <set wd>
 #$ -m ea -M pfannmulk@sou.edu
 
 # input/output file paths below
