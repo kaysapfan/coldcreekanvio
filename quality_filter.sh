@@ -6,8 +6,8 @@
 #$ -m ea -M pfannmulk@sou.edu
 
 # input/output file paths below
-    infile=/u/scratch/b/big2258/coldcreekanvio/coldcreek_samples.txt
-    outfile=/u/scratch/b/big2258/coldcreekanvio/01_QC
+    #infile=/u/scratch/b/big2258/coldcreekanvio/coldcreek_samples.txt
+    #outfile=/u/scratch/b/big2258/coldcreekanvio/01_QC
 
 # for more in-depth info read https://github.com/merenlab/illumina-utils/blob/master/README.md
 
@@ -31,5 +31,5 @@ for ini in 01_QC/*.ini; do iu-filter-quality-minoche $ini; done
     # check output file and make sure it is different than before
 
 # look at stats files to make sure it worked
-grep 'total pairs passed' 01_QC/*STATS.txt
+#grep 'total pairs passed' 01_QC/*STATS.txt
     #if it looks good you can begin coassembly
