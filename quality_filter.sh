@@ -14,7 +14,7 @@
 # create a directory for quality-filtered reads
 # already made -- 01_QC in /u/scratch/b/big2258/coldcreekanvio/01_QC
 
-iu-gen-configs coldcreek_samples.txt -o 01_QC   
+#iu-gen-configs coldcreek_samples.txt -o 01_QC   
     # create config files 
 
 #ls 01_QC/    
