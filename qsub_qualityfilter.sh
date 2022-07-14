@@ -1,7 +1,12 @@
 #!/bin/bash
-
-
-#$ -N quality_filter2
+#$ -N qsub_quality_filter
+#$ -o /u/scratch/b/big2258/coldcreekanvio/trim_files
+#$ -e /u/scratch/b/big2258/coldcreekanvio/trim_files
+#$ -cwd 
+#$ -l h_data=10G
+#$ -l h_rt=23:00:00
+#$ -w e
+    # verify options and abort if there is an error
 #$ -m ea -M pfannmulk@sou.edu
 
 module load anaconda3
