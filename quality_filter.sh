@@ -9,8 +9,8 @@ module load anaconda3
 conda activate anvio-7.1
 
 # input/output file paths below
-    #infile=/u/scratch/b/big2258/coldcreekanvio/coldcreek_samples.txt
-    #outfile=/u/scratch/b/big2258/coldcreekanvio/01_QC
+    infile=/u/scratch/b/big2258/coldcreekanvio/coldcreek_samples.txt
+    outfile=/u/scratch/b/big2258/coldcreekanvio/01_QC
 
 # for more in-depth info read https://github.com/merenlab/illumina-utils/blob/master/README.md
 
