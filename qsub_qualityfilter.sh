@@ -9,6 +9,7 @@
     # verify options and abort if there is an error
 #$ -m ea -M pfannmulk@sou.edu
 
+. /u/local/Modules/default/init/modules.sh
 module load anaconda3
 
 conda activate anvio-7.1
