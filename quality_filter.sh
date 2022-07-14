@@ -1,8 +1,12 @@
 #!/bin/bash
 
 
-#$ -N quality_filter
+#$ -N quality_filter2
 #$ -m ea -M pfannmulk@sou.edu
+
+module load anaconda3
+
+conda activate anvio-7.1
 
 # input/output file paths below
     #infile=/u/scratch/b/big2258/coldcreekanvio/coldcreek_samples.txt
