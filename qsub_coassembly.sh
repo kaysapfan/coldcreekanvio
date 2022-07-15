@@ -3,8 +3,9 @@
 #$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files
 #$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files
 #$ -cwd 
-#$ -l h_data=10G
+#$ -l h_data=25G
 #$ -l h_rt=23:00:00
+#$ -pe shared 40
 #$ -w e
     # verify options and abort if there is an error
 #$ -m ea 
