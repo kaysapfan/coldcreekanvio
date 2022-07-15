@@ -3,9 +3,10 @@
 #$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files
 #$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files
 #$ -cwd 
-#$ -l h_data=25G
+#$ -l h_data=40G
 #$ -l h_rt=23:00:00
-#$ -pe shared 40
+#$ -l h_vmem=5G
+#$ -pe shared 8
 #$ -w e
     # verify options and abort if there is an error
 #$ -m ea 
@@ -32,7 +33,7 @@ R2s=`ls 01_QC/*QUALITY_PASSED_R2* | python -c 'import sys; print(",".join([x.str
 
 # run megahit
 # specify what min contig size and num threads (depends on cpu)- check server cpu
-megahit -1 $R1s -2 $R2s --min-contig-len $1000 -m 0.85 -o 02_ASSEMBLY/ -t $40
+megahit -1 $R1s -2 $R2s --min-contig-len $1000 -m 0.85 -o 02_ASSEMBLY/ -t $8
     # the 1000 min contig size and 40 num threads is the default from anvio
 
 
