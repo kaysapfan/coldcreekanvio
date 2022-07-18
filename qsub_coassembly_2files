@@ -31,6 +31,7 @@ NUM_THREADS=8
 MIN_CONTIG_SIZE=1000
 
 # create two environment variables and look at them
+#CHANGE THE FILES/TRANSFER AND THEN CORRECT HTE 01_QC HERE
 R1s=`ls 01_QC/*QUALITY_PASSED_R1* | python -c 'import sys; print(",".join([x.strip() for x in sys.stdin.readlines()]))'`
 R2s=`ls 01_QC/*QUALITY_PASSED_R2* | python -c 'import sys; print(",".join([x.strip() for x in sys.stdin.readlines()]))'`
     # already created the environment variables- keep here to make sure it runs in qsub job
