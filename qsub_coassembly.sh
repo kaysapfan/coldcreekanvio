@@ -5,7 +5,7 @@
 #$ -cwd 
 #$ -l h_data=40G
 #$ -l h_rt=23:00:00
-#$ -l h_vmem=2.5G
+#$ -l h_vmem=5G
 #$ -pe shared 8
 #$ -w e
     # verify options and abort if there is an error
