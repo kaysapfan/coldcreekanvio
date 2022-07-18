@@ -1,9 +1,9 @@
 #!/bin/bash
 #$ -N qsub_coassembly_20G_2files
-#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files
-#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files
+#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/2sample_files
+#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/2sample_files
 #$ -cwd 
-#$ -l h_data=40G
+#$ -l h_data=20G
 #$ -l h_rt=23:00:00
 #$ -l h_vmem=2.5G
 #$ -pe shared 8
@@ -19,8 +19,8 @@ module load anaconda3
 conda activate anvio-7.1
 
 # input/output file paths below
-    #infile=/u/scratch/b/big2258/coldcreekanvio/....#enter file name here
-    #outfile=/u/scratch/b/big2258/#fix file path/name
+    #infile=/u/scratch/b/big2258/coldcreekanvio/01_QC/2sample_ex
+    #outfile=/u/scratch/b/big2258/coldcreekanvio/02_ASSEMBLY/2files_assembly
 
 # notes: anvio uses MEGAHIT for assembly... fingers crossed there is enough memory
 
@@ -38,7 +38,7 @@ R2s=`ls 01_QC/2sample_ex/*QUALITY_PASSED_R2* | python -c 'import sys; print(",".
 
 # run megahit
 # specify what min contig size and num threads (depends on cpu)- check server cpu
-megahit -1 $R1s -2 $R2s --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/ -t $NUM_THREADS
+megahit -1 $R1s -2 $R2s --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/2files_assembly -t $NUM_THREADS
     # the 1000 min contig size and 40 num threads is the default from anvio
 
 
