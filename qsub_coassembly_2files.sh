@@ -38,7 +38,7 @@ R2s=`ls 01_QC/2sample_ex/*QUALITY_PASSED_R2* | python -c 'import sys; print(",".
 
 # run megahit
 # specify what min contig size and num threads (depends on cpu)- check server cpu
-megahit -1 $R1s -2 $R2s --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/2files_assembly/ -t $NUM_THREADS
+megahit -1 $R1s -2 $R2s --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY.mini/ -t $NUM_THREADS
     # the 1000 min contig size and 40 num threads is the default from anvio
 
 
