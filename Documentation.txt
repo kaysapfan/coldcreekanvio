@@ -26,9 +26,9 @@ $ anvi-self-test --suite mini
 ##########################################################
 #
 #  July 11, 2022
-#  Run 
+#  Transfer ColdCreek fastq files from Garud Lab server and gunzip them
 ###########################################################
-# path where data lives:
+# path where data lives: 
 
 # get a list of all time pts:
 ls /srv/gsfs0/projects/snyder/hayanlee/projects/meta-gut/contigs/IDBA_UD/  | grep -v run > ~/snyder_project/timepts.txt
@@ -37,3 +37,9 @@ qsub /home/ngarud/snyder_project/qsub_scripts/MIDAS_test
 # now, run MIDAS on the real data set.
 qsub /home/ngarud/snyder_project/qsub_scripts/MIDAS_species_snps_cnvs
 ###############################
+#
+# July 13, 2022
+# Run a quality filter and trim job on the fastq files
+###########################################################
+# path where data lives
+
