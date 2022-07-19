@@ -1,12 +1,12 @@
 #!/bin/bash
 #$ -N qsub_coassembly_20G_2files
-#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/2sample_files
+#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/2sample_files.1122
 #$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/2sample_files
 #$ -cwd 
-#$ -l h_data=4G
+#$ -l h_data=6.25G
 #$ -l h_rt=23:00:00
-#$ -l h_vmem=32G
-#$ -pe shared 8
+#$ -l h_vmem=25G
+#$ -pe shared 4
 #$ -w e
     # verify options and abort if there is an error
 #$ -m ea 
