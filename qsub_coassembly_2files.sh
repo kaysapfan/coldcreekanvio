@@ -1,10 +1,10 @@
 #!/bin/bash
-#$ -N qsub_coassembly_7.20-5.37
-#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/halfmil_7.20-5.37
+#$ -N qsub_coassembly_7.21-9.05
+#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/halfmil_7.21-9.05
 
 #TODO: change output and error files
 
-#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/halfmil_7.20-5.37
+#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/halfmil_7.21-9.05
 #$ -cwd 
 #$ -l h_data=6.25G
 #$ -l h_rt=23:00:00
@@ -44,7 +44,7 @@ R2s=`ls coldcreekanvio/E12_1_R2.halfmil.fq | python -c 'import sys; print(",".jo
 
 # run megahit
 # specify what min contig size and num threads (depends on cpu)- check server cpu
-megahit -1 $R1s -2 $R2s --k-max $KMAX_SIZE --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/7.20_halfmil -t $NUM_THREADS
+megahit -1 $R1s -2 $R2s --k-max $KMAX_SIZE --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/7.21_halfmil -t $NUM_THREADS
     # the 1000 min contig size and 40 num threads is the default from anvio
 
 #TODO: change kmax value to 59 instead of 81
