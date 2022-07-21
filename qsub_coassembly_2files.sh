@@ -38,8 +38,8 @@ KMAX_SIZE=59
 
 # create two environment variables and look at them
 #CHANGE THE FILES/TRANSFER AND THEN CORRECT HTE 01_QC HERE
-R1s=`ls coldcreekanvio/E11_1_1.fq | python -c 'import sys; print(",".join([x.strip() for x in sys.stdin.readlines()]))'`
-R2s=`ls coldcreekanvio/E11_1_2.fq | python -c 'import sys; print(",".join([x.strip() for x in sys.stdin.readlines()]))'`
+R1s=`ls coldcreekanvio/E12_1_R1.halfmil.fq | python -c 'import sys; print(",".join([x.strip() for x in sys.stdin.readlines()]))'`
+R2s=`ls coldcreekanvio/E12_1_R2.halfmil.fq | python -c 'import sys; print(",".join([x.strip() for x in sys.stdin.readlines()]))'`
     # already created the environment variables- keep here to make sure it runs in qsub job
 
 # run megahit
