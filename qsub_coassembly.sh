@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -N qsub_coassembly_40G_pt2
-#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files
-#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files
+#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.samples
+#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.samples
 #$ -cwd 
 #$ -l h_data=5G
 #$ -l h_rt=23:00:00
@@ -29,6 +29,7 @@ conda activate anvio-7.1
 # initialize variables for num_threads and min_contig_length
 NUM_THREADS=8
 MIN_CONTIG_SIZE=1000
+KMAX_SIZE=59
 
 # create two environment variables and look at them
 R1s=`ls 01_QC/*QUALITY_PASSED_R1* | python -c 'import sys; print(",".join([x.strip() for x in sys.stdin.readlines()]))'`
@@ -37,7 +38,7 @@ R2s=`ls 01_QC/*QUALITY_PASSED_R2* | python -c 'import sys; print(",".join([x.str
 
 # run megahit
 # specify what min contig size and num threads (depends on cpu)- check server cpu
-megahit -1 $R1s -2 $R2s --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/ -t $NUM_THREADS
+megahit -1 $R1s -2 $R2s --k-max $KMAX_SIZE --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/7.22_all -t $NUM_THREADS
     # the 1000 min contig size and 40 num threads is the default from anvio
 
 
