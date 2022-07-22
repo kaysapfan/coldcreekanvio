@@ -4,7 +4,8 @@
 #$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.samples
 #$ -cwd 
 #$ -l h_data=5G
-#$ -l h_rt=23:00:00
+#$ -l highp
+#$ -l h_rt=168:00:00
 #$ -l h_vmem=40G
 #$ -pe shared 8
 #$ -w e
