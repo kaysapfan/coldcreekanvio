@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -N qsub_coassembly_40G_pt2
-#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.samples
-#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.samples
+#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.o
+#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.e
 #$ -cwd 
 #$ -l h_data=5G
 #$ -l highp

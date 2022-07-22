@@ -1,0 +1,3 @@
+run the hmms
+then run the anvi-run -scg-taxonomy
+run anvi-estimate-taxonomy -c contig.db
