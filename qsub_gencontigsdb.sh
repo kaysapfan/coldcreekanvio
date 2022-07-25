@@ -34,3 +34,6 @@ mv E12_1.contigs-fixed.fa E12_1.contigs.fa
 
     # Anvi'o will use 'prodigal' by Hyatt et al (doi:10.1186/1471-2105-11-119) to
     # identify open reading frames in your data.
+
+
+# this process will take ~20 minutes! (per individual sample)

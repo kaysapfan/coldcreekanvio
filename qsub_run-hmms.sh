@@ -25,5 +25,5 @@ conda activate anvio-7.1
 # I need the end flag bc I tried to run it from the command line and it took too long
 # if there are some hmm files the program won't run, this will overwrite them.
 # CHANGE BEFORE NEXT SAMPLE!!
-anvi-run-hmms -c contigs.db --just-do-it
+anvi-run-hmms -c E12_1.contigs.db --just-do-it
 
