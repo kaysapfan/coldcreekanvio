@@ -1,5 +1,5 @@
 #!/bin/bash
-#$ -N run-hmms.7/25-E1.1
+#$ -N run-hmms_7.25-E1.1
 #$ -o /u/scratch/b/big2258/coldcreekanvio/hmms/7.25-1.1
 
 #TODO: change output and error files
