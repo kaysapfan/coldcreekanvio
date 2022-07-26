@@ -1,10 +1,10 @@
 #!/bin/bash
-#$ -N contigsdb_7.26-E6.3
-#$ -o /u/scratch/b/big2258/coldcreekanvio/contigs_files/7.26_6.3o
+#$ -N contigsdb_7.26-E9.1
+#$ -o /u/scratch/b/big2258/coldcreekanvio/contigs_files/7.26_9.1o
 
 #TODO: change output and error files
 
-#$ -e /u/scratch/b/big2258/coldcreekanvio/contigs_files/7.26_6.3e
+#$ -e /u/scratch/b/big2258/coldcreekanvio/contigs_files/7.26_9.1e
 #$ -cwd 
 #$ -l h_data=6.25G
 #$ -l h_rt=23:00:00
@@ -34,7 +34,7 @@ conda activate anvio-7.1
 # DID THE ABOVE ALREADY 
 
 # create a contigs db for each of the samples before running the hmms
- anvi-gen-contigs-database -f E6_3.contigs.fa -o E6_3.contigs.db -n 'Sample E6_3'
+ anvi-gen-contigs-database -f E9_1.contigs.fa -o E9_31.contigs.db -n 'Sample E9_1'
 
     # Anvi'o will use 'prodigal' by Hyatt et al (doi:10.1186/1471-2105-11-119) to
     # identify open reading frames in your data.
