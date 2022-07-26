@@ -1,12 +1,12 @@
 #!/bin/bash
-#$ -N qsub_coassembly_40G_pt2
-#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.o
-#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.22_all.e
+#$ -N qsub_coassembly_all_7.26
+#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.26_all.o
+#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.26_all.e
 #$ -cwd 
-#$ -l h_data=5G
+#$ -l h_data=20G
 #$ -l highp
 #$ -l h_rt=168:00:00
-#$ -l h_vmem=40G
+#$ -l h_vmem=160G
 #$ -pe shared 8
 #$ -w e
     # verify options and abort if there is an error
@@ -39,7 +39,7 @@ R2s=`ls 01_QC/*QUALITY_PASSED_R2* | python -c 'import sys; print(",".join([x.str
 
 # run megahit
 # specify what min contig size and num threads (depends on cpu)- check server cpu
-megahit -1 $R1s -2 $R2s --k-max $KMAX_SIZE --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/7.22_all -t $NUM_THREADS
+megahit -1 $R1s -2 $R2s --k-max $KMAX_SIZE --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/7.26_all -t $NUM_THREADS
     # the 1000 min contig size and 40 num threads is the default from anvio
 
 
