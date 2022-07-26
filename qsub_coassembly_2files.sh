@@ -6,9 +6,9 @@
 
 #$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/onesamp_7.26_1.3e
 #$ -cwd 
-#$ -l h_data=6.25G
+#$ -l h_data=7.5G
 #$ -l h_rt=23:00:00
-#$ -l h_vmem=25G
+#$ -l h_vmem=30G
 #$ -pe shared 4
 #$ -w e
     # verify options and abort if there is an error
