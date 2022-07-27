@@ -22,6 +22,6 @@ module load anaconda3
 conda activate anvio-7.1
 
 
-anvi-profile -i /u/scratch/b/big2258/coldcreekanvio/04_MAPPING/E1_1.bam -c E1_1.contigs.db -o /u/scratch/b/big2258/coldcreekanvio/E1_1.PROFILE.db
+anvi-profile -i /u/scratch/b/big2258/coldcreekanvio/04_MAPPING/E1_1/map/E1_1.bam -c E1_1.contigs.db -o /u/scratch/b/big2258/coldcreekanvio/E1_1.PROFILE.db
 
 # create a profile from sample [...] bam and contig.dbs to output 
