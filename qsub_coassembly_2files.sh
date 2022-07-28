@@ -1,15 +1,15 @@
 #!/bin/bash
-#$ -N qsub_coassembly_7.26_E1.1_E1.3
-#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/twosamp_7.26_E1.1_E1.3o
+#$ -N qsub_coassembly_7.28_E1.1_E1.3
+#$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/twosamp_7.28_E1.1_E1.3o
 
 #TODO: change output and error files
 
-#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/twosamp_7.26_E1.1_E1.3e
+#$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/twosamp_7.28_E1.1_E1.3e
 #$ -cwd 
-#$ -l h_data=7.5G
+#$ -l h_data=5G
 #$ -l h_rt=23:00:00
-#$ -l h_vmem=30G
-#$ -pe shared 4
+#$ -l h_vmem=40G
+#$ -pe shared 8
 #$ -w e
     # verify options and abort if there is an error
 #$ -m ea 
@@ -44,7 +44,7 @@ R2s=`ls 01_QC/sample_E1_*-QUALITY_PASSED_R2.fastq | python -c 'import sys; print
 
 # run megahit
 # specify what min contig size and num threads (depends on cpu)- check server cpu
-megahit -1 $R1s -2 $R2s --k-max $KMAX_SIZE --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/7.26_E1.1_E1.3 -t $NUM_THREADS
+megahit -1 $R1s -2 $R2s --k-max $KMAX_SIZE --min-contig-len $MIN_CONTIG_SIZE -m 0.85 -o 02_ASSEMBLY/7.28_E1.1_E1.3 -t $NUM_THREADS
     # the 1000 min contig size and 40 num threads is the default from anvio
 
 #TODO: change kmax value to 59 instead of 81
