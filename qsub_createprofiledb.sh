@@ -1,10 +1,10 @@
 #!/bin/bash
-#$ -N profiledb_7.27-E1.1
-#$ -o /u/scratch/b/big2258/coldcreekanvio/profile_files/7.27o
+#$ -N profiledb_7.28-E1.1
+#$ -o /u/scratch/b/big2258/coldcreekanvio/profile_files/7.28o
 
 #TODO: change output and error files
 
-#$ -e /u/scratch/b/big2258/coldcreekanvio/profile_files/7.27e
+#$ -e /u/scratch/b/big2258/coldcreekanvio/profile_files/7.28e
 #$ -cwd 
 #$ -l h_data=6.25G
 #$ -l h_rt=23:00:00
