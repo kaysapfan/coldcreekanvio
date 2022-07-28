@@ -3,7 +3,7 @@
 #$ -o /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.28_all.o
 #$ -e /u/scratch/b/big2258/coldcreekanvio/coassembly_files/7.28_all.e
 #$ -cwd 
-#$ -l h_data=20G
+#$ -l h_data=20G,exclusive
 #$ -l highp eeskin 
 #$ -l h_rt=168:00:00
 #$ -l h_vmem=160G
